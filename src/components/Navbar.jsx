@@ -6,15 +6,24 @@ import Logo from '@/images/oglogo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from "next/router";
+import {BsTriangleFill} from "react-icons/bs"
+
 
 const NavbarItem = ({title, classProps}) => {
     const router = useRouter();    
 
     return(
-        <Link href={"/home"} className={`mx-4  font-Progress cursor-pointer ${classProps}`}>
+        <Link href={"/home"} className={`mx-4 relative group  font-Progress cursor-pointer ${classProps}`}>
          <div className={`flex text-xl items-end ${
                 router.asPath === "/"+title.toLowerCase() ? "text-[#FA0300]" : "text-[#868686]"
               } hover:text-white/80 `}> {title} </div>
+              {title !== "HOME" ? 
+              <div className='absolute hidden group-hover:block top-8 text-white/50'>
+            <BsTriangleFill />            
+            <div>
+                <p className='font-OssemRust'>Coming Soon</p>
+            </div>
+        </div> : ""}
         </Link>
     
    )      };
