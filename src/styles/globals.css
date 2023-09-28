@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: "Ossem-Regular";
+  src: url("/fonts/Ossem-Regular.otf");
+}
+@font-face {
+  font-family: "Ossem-Rough";
+  src: url("/fonts/Ossem-Rough.otf");
+}
+@font-face {
+  font-family: "Ossem-Rounded";
+  src: url("/fonts/Ossem-Rounded.otf");
+}
+@font-face {
+  font-family: "Ossem-Rust";
+  src: url("/fonts/Ossem-Rust.otf");
+}
+@font-face {
+  font-family: "Progress";
+  src: url("/fonts/ProgressPersonalUse-EaJdz.ttf");
+}
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +47,24 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.btn-pop{
+  &:active:hover,
+  &:active:focus {
+    animation: button-pop 0s ease-in-out;
+    transform: scale(var(--btn-focus-scale, 0.97));
+  }
+}
+
+@keyframes button-pop {
+  0% {
+    transform: scale(var(--btn-focus-scale, 0.98));
+  }
+  40% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
