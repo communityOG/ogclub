@@ -16,8 +16,7 @@ export default function GuildButton(props) {
         <div className='flex items-center text-xl gap-1'>
             <p className='font-Progress '>{props.title}</p>
             <HiOutlineForward />
-        </div>
-        
+        </div>        
     </div>
   )
 }
