@@ -9,7 +9,7 @@ import Link from "next/link"
 export default function Footer() {
   return (
     <div className='bg-[#010101] px-6 md:px-40 pt-16  pb-10 font-Progress flex flex-col items-center gap-12'>
-        <h3 className=' text-center text-[20px] md:text-4xl'>Ready to join the ranks of the OGs? Membership is by application only, 'cause we're all about quality, not quantity</h3>
+        <h3 className=' text-center text-[1.25rem] md:text-4xl'>Ready to join the ranks of the OGs? Membership is by application only, 'cause we're all about quality, not quantity</h3>
         <button className='md:mt-2  hover:scale-110  duration-300 ease-in-out  text-[14px] md:text-xl p-3 px-5 md:p-1.5 md:px-3.5 drop-shadow-xl shadow-xl bg-[#FA0300] w-fit btn-pop'>JOIN THE NFT WAITLIST</button>
         <div className='flex gap-16 justify-center'>
 
