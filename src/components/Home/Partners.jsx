@@ -41,7 +41,7 @@ export default function Partners() {
       </div>
 
       <div>
-        <p className="text-[14px]  md:text-3xl font-OssemRust text-center mt-12">And Many More....</p>
+        <p className="text-[0.875rem]  md:text-3xl font-OssemRust text-center mt-12">And Many More....</p>
       </div>
     </div>
   );
