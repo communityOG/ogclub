@@ -64,15 +64,15 @@ export default function Navbar() {
           )} */}
           {toggleMenu && (
             <ul className='z-50 fixed -top-0 -right-2 p-3  h-screen shadow-2xl lg:hidden list-none
-            flex flex-col justify-start items-center rounded-md  backdrop-blur-md text-white animate-slide-in'>
+            flex flex-col justify-start items-center rounded-md  bg-black text-white animate-slide-in'>
               <li className="text-xl w-full my-2">
                 <AiOutlineClose onClick={()=> setToggleMenu(false)}/></li>
                 {["Home","About", "PARTNERS", "OG AFFAIRS", "OG OFFERINGS", "OG ACADEMY", "OG STORE", "Speakers"].map((item,index) =>
             <NavbarItem key={item+index} title={item} classProps="my-2 text-lg" />,
           )}
-            <div className='mt-5'>
+            {/* <div className='mt-5'>
             <Link href="/Waitlist" className=' shadow hover:shadow-md mr-2 hover:shadow-white shadow-white px-2  duration-300 py-2 bg-white  font-Progress font-medium text-[#101828] rounded-3xl'>Join Waitlist</Link>
-        </div>
+        </div> */}
             </ul>
             
 
