@@ -15,7 +15,7 @@ export default function Roadmap() {
             </div>
 
             <div className='hidden md:block'> {/* Hidden on small screens */}
-                    <div className='w-[0.5px]   md:h-52 mt-10 md:mt-24 z-20 border -rotate-[45] md:-rotate-45 bg-white ' /> {/* <Image src={HeroImage} alt="EMBRACE OG INNOVATION" /> */}
+                    <div className='w-[0.5px] h-32  lg:h-52 mt-10 md:mt-24 z-20 border -rotate-[45] md:-rotate-45 bg-white ' /> {/* <Image src={HeroImage} alt="EMBRACE OG INNOVATION" /> */}
             </div>
             <div className='md:hidden flex items-center justify-center'> {/* Shown only on small screens */}
                <div className='w-[0.5px] h-40  z-20 border -rotate-[45] md:-rotate-45 bg-white ' />
@@ -23,12 +23,12 @@ export default function Roadmap() {
 
 
 
-            <div className='z-40  mt-4 md:mt-32  flex justify-center items-center'>
+            <div className='z-40  mt-4 md:mt-40  flex justify-center items-center'>
                 <RoadmapHexagon no="2" year="2021" />
             </div>
 
             <div className='hidden md:block'> {/* Hidden on small screens */}
-                <div className='w-[0.5px] md:h-52 md:mt-24 z-20  md:rotate-45 bg-white ' /> {/* <Image src={HeroImage} alt="EMBRACE OG INNOVATION" /> */}
+                <div className='w-[0.5px] h-32  lg:h-52 md:mt-24 z-20  md:rotate-45 bg-white ' /> {/* <Image src={HeroImage} alt="EMBRACE OG INNOVATION" /> */}
             </div>
 
             <div className='md:hidden flex items-center justify-center'> {/* Shown only on small screens */}
@@ -41,7 +41,7 @@ export default function Roadmap() {
 
 
              <div className='hidden md:block'> {/* Hidden on small screens */}
-                    <div className='w-[0.5px]   md:h-52 mt-10 md:mt-24 z-20 border -rotate-[45] md:-rotate-45 bg-white ' /> {/* <Image src={HeroImage} alt="EMBRACE OG INNOVATION" /> */}
+                    <div className='w-[0.5px]  h-32  lg:h-52 mt-10 md:mt-24 z-20 border -rotate-[45] md:-rotate-45 bg-white ' /> {/* <Image src={HeroImage} alt="EMBRACE OG INNOVATION" /> */}
             </div>
             <div className='md:hidden flex items-center justify-center'> {/* Shown only on small screens */}
                <div className='w-[0.5px] h-40  z-20 border -rotate-[45] md:-rotate-45 bg-white ' />
@@ -49,12 +49,12 @@ export default function Roadmap() {
 
 
 
-            <div className='z-40  mt-4 md:mt-32  flex justify-center items-center'>
+            <div className='z-40  mt-4 md:mt-40  flex justify-center items-center'>
                 <RoadmapHexagon no="4" year="2022" />
             </div>
             
             <div className='hidden md:block'> {/* Hidden on small screens */}
-                <div className='w-[0.5px] md:h-52 md:mt-24 z-20  md:rotate-45 bg-white ' /> {/* <Image src={HeroImage} alt="EMBRACE OG INNOVATION" /> */}
+                <div className='w-[0.5px] h-32  lg:h-52 md:mt-24 z-20  md:rotate-45 bg-white ' /> {/* <Image src={HeroImage} alt="EMBRACE OG INNOVATION" /> */}
             </div>
 
             <div className='md:hidden flex items-center justify-center'> {/* Shown only on small screens */}
@@ -70,7 +70,7 @@ export default function Roadmap() {
 
             
             <div className='hidden md:block'> {/* Hidden on small screens */}
-                    <div className='w-[0.5px]   md:h-52 mt-10 md:mt-24 z-20 border -rotate-[45] md:-rotate-45 bg-white ' /> {/* <Image src={HeroImage} alt="EMBRACE OG INNOVATION" /> */}
+                    <div className='w-[0.5px]  h-32  lg:h-52 mt-10 md:mt-24 z-20 border -rotate-[45] md:-rotate-45 bg-white ' /> {/* <Image src={HeroImage} alt="EMBRACE OG INNOVATION" /> */}
             </div>
 
             <div className='md:hidden flex items-center justify-center'> {/* Shown only on small screens */}
@@ -79,7 +79,7 @@ export default function Roadmap() {
 
 
 
-            <div className='z-40  mt-4 md:mt-32  flex justify-center items-center'>
+            <div className='z-40  mt-4 md:mt-40  flex justify-center items-center'>
                 <RoadmapHexagon no="6" year="2024" />
             </div>
         </div>
