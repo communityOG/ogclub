@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import HeroImage from "@/images/heroImage.png"
-import HeroImageM from "@/images/HeroImageM.png"
+import HeroImageM from "@/images/heroImageM.png"
 
 export default function Hero() {
   return (
