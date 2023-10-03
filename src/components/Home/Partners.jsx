@@ -14,9 +14,9 @@ import PartnerLogo11 from "@/images/partnerLogo11.png";
 
 export default function Partners() {
   return (
-    <div className="pt-32 px-12">
-      <h1 className="font-Progress text-5xl text-center">OUR PARTNERS</h1>
-      <div className="grid grid-cols-8 gap-5 justify-items-center mt-12">
+    <div className="pt-16  md:pt-32 px-12">
+      <h1 className="font-Progress text-[20px] md:text-5xl text-center">OUR PARTNERS</h1>
+      <div className="grid grid-cols-2 md:grid-cols-8 gap-5 justify-items-center mt-12">
         <Image src={PartnerLogo1} alt="OG Partner" />
         <Image src={PartnerLogo5} alt="OG Partner" />
         <Image src={PartnerLogo6} alt="OG Partner" />
@@ -26,13 +26,22 @@ export default function Partners() {
         <Image src={PartnerLogo10} alt="OG Partner" />
         <Image src={PartnerLogo11} alt="OG Partner" />
       </div>
-      <div className="flex justify-center gap-12 2xl:gap-16 mt-8">
+      <div className="grid grid-cols-2 md:flex md:grid-cols-0  justify-items-center md:justify-center  gap-5 md:gap-12 2xl:gap-16 mt-8">
         <Image src={PartnerLogo3} alt="OG Partner" />
         <Image src={PartnerLogo4} alt="OG Partner" />
-        <Image src={PartnerLogo2} alt="OG Partner" />
+        
+        <div className="hidden md:block">
+            <Image src={PartnerLogo2} alt="OG Partner" className=" md:mx-0"/>
+        </div>
+  
       </div>
+
+      <div className='md:hidden mt-8 flex items-center justify-center'> {/* Shown only on small screens */}
+          <Image src={PartnerLogo2} alt="OG Partner" className=" md:mx-0"/>
+      </div>
+
       <div>
-        <p className="text-3xl font-OssemRust text-center mt-12">And Many More....</p>
+        <p className="text-[0.875rem]  md:text-3xl font-OssemRust text-center mt-12">And Many More....</p>
       </div>
     </div>
   );
