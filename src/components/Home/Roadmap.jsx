@@ -21,8 +21,6 @@ export default function Roadmap() {
                <div className='w-[0.5px] h-40  z-20 border -rotate-[45] md:-rotate-45 bg-white ' />
             </div>
 
-
-
             <div className='z-40  mt-4 md:mt-40  flex justify-center items-center'>
                 <RoadmapHexagon no="2" year="2021" />
             </div>
