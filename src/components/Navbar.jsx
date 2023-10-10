@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from "next/router";
 import {BsTriangleFill} from "react-icons/bs"
+import Burger from "../images/Burger.png"
 
 
 const NavbarItem = ({title, classProps}) => {
@@ -56,7 +57,7 @@ export default function Navbar() {
             <button  className='font-Progress text-2xl text-[#868686]' onClick={(e) => (setToggleMenu(true))}>
 
                 {/* <Image src={Hamburger} alt="more items"  className=" md:hidden cursor-pointer"  /> this is where menu will go in responsive view */}
-          MENU
+                <Image src={Burger} alt="menu burger" className=" cursor-pointer" />
             </button>
           )}
           {/* {toggleMenu && (

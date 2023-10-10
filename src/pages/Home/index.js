@@ -21,7 +21,7 @@ export default function index() {
             <MissionBanner />
             <Mission />
             <Vision />
-            <div className='bg-gradient-to-b from-[#010101] to-[#1D2735] py-16'>
+            <div className='md:bg-gradient-to-b from-[#010101] to-[#1D2735] py-16'>
                 <Roadmap />
                 <Partners />
             </div>
