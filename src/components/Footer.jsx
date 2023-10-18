@@ -16,7 +16,7 @@ export default function Footer() {
         <Link className='hover:scale-125 duration-300 ease-in-out' aria-label='my-Link' href="https://t.me/ogconofficial" rel='noopener noreferrer' target='_blank'><FaTelegram className='text-white' fontSize={30} /></Link>
         {/* <Link className='hover:scale-125 duration-300 ease-in-out' aria-label='my-Link' href="https://www.instagram.com/ogconofficial/?hl=en" rel='noopener noreferrer' target='_blank'><AiOutlineInstagram className='text-white' fontSize={30} /></Link> */}
         <Link className='hover:scale-125 duration-300 ease-in-out' aria-label='my-Link' href="https://twitter.com/OGConOfficial" rel='noopener noreferrer' target='_blank'><AiOutlineTwitter className='text-white' fontSize={30} /></Link>
-        <Link className='hover:scale-125 duration-300 ease-in-out' aria-label='my-Link' href="https://twitter.com/OGConOfficial" rel='noopener noreferrer' target='_blank'><BsLinkedin className='text-white' fontSize={30} /></Link>
+        {/* <Link className='hover:scale-125 duration-300 ease-in-out' aria-label='my-Link' href="https://twitter.com/OGConOfficial" rel='noopener noreferrer' target='_blank'><BsLinkedin className='text-white' fontSize={30} /></Link> */}
 
         </div>
     </div>
