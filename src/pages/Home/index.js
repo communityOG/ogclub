@@ -12,21 +12,23 @@ import React from 'react'
 export default function index() {
   return (
     <div>
-        <div className='absolute top-0 w-full'>
-            <Navbar />
+      <div className='absolute top-0 w-full'>
+        <Navbar />
+      </div>
+      <div className=''>
+        <Hero />
+        <Welcome />
+        <div className='min-h-[265px] bg-heroMissionMobile md:h-auto md:bg-none'>
+          <MissionBanner />
+          <Mission />
         </div>
-        <div className=''>
-            <Hero />
-            <Welcome />
-            <MissionBanner />
-            <Mission />
-            <Vision />
-            <div className='md:bg-gradient-to-b from-[#010101] to-[#1D2735] py-16'>
-                <Roadmap />
-                <Partners />
-            </div>
+        <Vision />
+        <div className='md:bg-gradient-to-b from-[#010101] to-[#1D2735] py-16'>
+          {/* <Roadmap /> */}
+          <Partners />
         </div>
-        <Footer />
+      </div>
+      <Footer />
     </div>
   )
 }

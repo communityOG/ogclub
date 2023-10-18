@@ -23,6 +23,11 @@ module.exports = {
         'homeWelcome': "url('/images/homeWelcome.png')",
         'homeMission': "url('/images/homeMission.png')",
         'homeVision': "url('/images/homeVision.png')",
+        
+        'homeHeroMobile' : "url('/images/homeHeroMobile.png')",
+        'homeWelcomeMobile' : "url('/images/homeWelcomeMobile.png')",
+        'homeVisionMobile': "url('/images/homeVisionMobile.png')",
+        'heroMissionMobile': "url('/images/heroMissionMobile.png')",
       },
     },
   },
