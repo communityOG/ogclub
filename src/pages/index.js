@@ -25,7 +25,7 @@ export default function Home() {
         <div className="absolute top-[80%] md:top-[50%] flex justify-center w-full ">
           <Link
             href="home"
-            className="hover:scale-110  duration-300 ease-in-out font-Progress text-lg md:text-2xl p-1.5 px-3.5 drop-shadow-xl shadow-xl bg-[#FA0300] btn-pop rounded-3xl"
+            className="hover:scale-110  duration-300 ease-in-out font-Progress text-lg md:text-2xl p-1.5 px-3.5 drop-shadow-xl shadow-xl bg-[#FA0300] btn-pop rounded-3xl"            
           >
             EXPERIENCE THE OG WORLD
           </Link>

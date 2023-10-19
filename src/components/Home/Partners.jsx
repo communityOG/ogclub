@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import PartnerModal from "../PartnerModal";
 
 import PartnerLogo1 from "@/images/partnerLogo/partnerLogo1.png"
 import PartnerLogo2 from "@/images/partnerLogo/partnerLogo2.png"
@@ -21,7 +22,7 @@ import PartnerLogo16 from "@/images/partnerLogo/partnerLogo16.png"
 
 export default function Partners() {
   return (
-    <div className="pt-16  md:pt-32 px-12">
+    <div id="partners" className="pt-16  md:pt-32 px-12">
       <h1 className="font-Progress text-[20px] md:text-5xl text-center">OUR PARTNERS</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-5 justify-items-center mt-12">
         <Image src={PartnerLogo1} alt="OG Partner" />
@@ -41,8 +42,21 @@ export default function Partners() {
         <Image src={PartnerLogo15} alt="OG Partner" />
         <Image src={PartnerLogo16} alt="OG Partner" />
       </div>
-      <div>
+      <div className="flex flex-col justify-center items-center">
         <p className="text-[0.875rem]  md:text-3xl font-OssemRust text-center mt-12">And Many More....</p>
+        <button className=' my-10 font-Progress md:mb-0 text-center hover:scale-110 duration-300 ease-in-out text-[0.875rem] md:text-xl p-1.5  px-10 md:px-12  drop-shadow-xl shadow-xl bg-[#FA0300] md:w-fit btn-pop rounded-3xl'
+                  onClick={()=>document.getElementById('my_modal_3').showModal()}
+                  >Become A Partner</button>
+
+                  <dialog id="my_modal_3" className="modal">
+                  <div className="modal-box bg-black border border-[#FA0300]">
+                      <form method="dialog">
+                        {/* if there is a button in form, it will close the modal */}
+                        <button className="btn btn-sm btn-circle btn-ghost text-[#FA0300] absolute right-2 top-2">✕</button>
+                      </form>
+                      <PartnerModal />
+                    </div>
+                  </dialog>
 
       </div>
     </div>
