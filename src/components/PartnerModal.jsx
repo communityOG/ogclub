@@ -7,64 +7,95 @@ export default function PartnerModal() {
   const [company, setCompany] = useState("");
   const [position, setPosition] = useState("");
   const [formData, setFormData] = useState({
-    "entry.2037917220": "",
-    "entry.1146839265": "",
-    "entry.1451219623": ""
+    "entry.1299402931": "",
+    "entry.154737156": "",
+    "entry.1555725832": "",
+    "entry.2016959891": "",
   });
 
-  const HandleSubmit =() =>{
+  const handleInputData = (input) => (e) => {
+    const { value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [input]: value
+    }));
+  };
 
-    // https://docs.google.com/forms/u/3/d/e/1FAIpQLScamHdrRNJ4ur9V7PVH4d9Y-vqQHKtBSu_c6wODK37fNlC0VQ/formResponse
-    
+  const dataSend = async () => {
+    console.log(" FORM DATA", formData);
+    console.log("position", position)
+    const url = `https://docs.google.com/forms/d/e/1FAIpQLScamHdrRNJ4ur9V7PVH4d9Y-vqQHKtBSu_c6wODK37fNlC0VQ/formResponse?entry.1299402931=${formData["entry.1299402931"]}&entry.154737156=${formData["entry.154737156"]}&entry.1555725832=${formData["entry.1555725832"]}&entry.2016959891=${formData["entry.2016959891"]}&entry.1108091049=${position}`
+    console.log("URL", url)
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    });
+    console.log("resp", res);
   }
+
+
   return (
     <div>
       <h1 className=" text-center font-extrabold  text-2xl md:text-4xl w-full">
         Partner FORM
       </h1>
-      <div className="flex justify-center mt-2">        
+      <form className="flex justify-center mt-2">
         <div className=" rounded-2xl p-8">
           <div className="grid grid-cols-1 md:grid-cols-2  gap-8 z-20   justify-items-center">
+
             <div className="text-white w-full">
               <label className="font-GilroyMedium ">First Name</label>
               <input
                 type="text"
                 placeholder="Please enter your first name"
                 className="bg-[#1E1E1E] py-4 rounded-lg text-sm  font-OssemRegular w-full p-3 "
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
+                onChange={handleInputData("entry.1299402931")}
+                value={formData["entry.1299402931"]}
+                name="entry.1299402931"
               />
             </div>
+
             <div className="text-white w-full">
               <label className="font-GilroyMedium ">Last Name</label>
               <input
                 type="text"
                 placeholder="Please enter your first name"
                 className="bg-[#1E1E1E] py-4 rounded-lg w-full text-sm p-3 font-OssemRegular"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
+                onChange={handleInputData("entry.154737156")}
+                value={formData["entry.154737156"]}
+                name="entry.154737156"
               />
+
             </div>
+
+
             <div className="text-white w-full">
               <label className="font-GilroyMedium ">Email</label>
               <input
                 type="email"
                 placeholder="Please enter your first name"
                 className="bg-[#1E1E1E] py-4 rounded-lg w-full text-sm p-3 font-OssemRegular"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleInputData("entry.1555725832")}
+                value={formData["entry.1555725832"]}
+                name="entry.1555725832"
               />
             </div>
+
             <div className="text-white w-full">
               <label className="font-GilroyMedium ">Company</label>
               <input
                 type="text"
                 placeholder="Please enter your first name"
                 className="bg-[#1E1E1E] py-4 rounded-lg w-full text-sm p-3 font-OssemRegular"
-                value={company}
-                onChange={(e) => setCompany(e.target.value)}
+                onChange={handleInputData("entry.2016959891")}
+                value={formData["entry.2016959891"]}
+                name="entry.2016959891"
               />
             </div>
+
+
             <div className="text-white w-full ">
               <label className="font-GilroyMedium ">Position</label>
               <select
@@ -89,12 +120,15 @@ export default function PartnerModal() {
                 ))}
               </select>
             </div>
+
+
+
           </div>
-            <div className='flex items-center justify-center'>
-                    <button className='font-GilroyMedium font-medium  text-[#101828] rounded-3xl px-7 py-3 bg-white shadow hover:shadow-md shadow-white hover:shadow-white duration-300 mt-8 text-xl hover:scale-105' onClick={HandleSubmit}>Submit</button>
-                </div>
+          <div className='flex items-center justify-center'>
+            <button className='font-GilroyMedium font-medium  text-[#101828] rounded-3xl px-7 py-3 bg-white shadow hover:shadow-md shadow-white hover:shadow-white duration-300 mt-8 text-xl hover:scale-105' onClick={(e) => { dataSend(); }} >Submit</button>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
