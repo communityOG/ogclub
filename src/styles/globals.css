@@ -69,3 +69,14 @@ body {
   }
 }
 
+.modal {
+  @apply bg-transparent text-[inherit] duration-200 ease-out;
+  transition-property: transform, opacity, visibility;
+  overflow-y: hidden;
+  overscroll-behavior: contain;
+  &:not(dialog:not(.modal-open)),
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.70);
+    animation: modal-pop 0.25s ease-in-out;
+  }
+}

@@ -14,15 +14,15 @@ const NavbarItem = ({title, classProps}) => {
     const router = useRouter();    
 
     return(
-      <Link href={"/home"} className={`mx-4 relative group  font-Progress cursor-pointer ${classProps}`}>
+      <Link href={title !== "PARTNERS" ? "/home" : "#partners"} className={`mx-4 relative group  font-Progress cursor-pointer ${classProps}`}>
       <div className={`flex text-md lg:text-xl items-end ${
              router.asPath === "/"+title.toLowerCase() ? "text-[#FA0300]" : "text-[#868686]"
            } hover:text-white/80 `}> {title} </div>
            {title !== "HOME" ? 
-           <div className='absolute hidden lg-block group-hover:block  text-white/50'>
+           <div className='absolute ml-2 hidden lg-block group-hover:block  text-white/50'>
            <div className='hidden lg:block'>
 
-         <BsTriangleFill />            
+         <BsTriangleFill  className='ml-10'/>            
            </div>
          <div className='hidden lg:block'>
              <p className='font-OssemRust'>Coming Soon</p>
