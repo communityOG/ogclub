@@ -38,17 +38,14 @@ export default function WaitlistModal() {
   };
 
   const dataSend = async () => {
-    console.log("check", newsletter)
-
     const url = `https://docs.google.com/forms/d/e/1FAIpQLSffxKUlMeKecCBr93vPHBEE0WmcRqsWeS-FUjvcOj6LKtWvEA/formResponse?entry.677866763=${firstName}&entry.708861375=${lastName}&entry.965794500=${email}&entry.83898953=${wallet}&entry.2112217598=${referral}&entry.841665813=${newsletter}&entry.578617732=${marketing}`
-    console.log("URL", url)
-    const res = await fetch(url, {
+    await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       }
     });
-    console.log("resp", res);
+
   }
 
   return (
@@ -74,7 +71,7 @@ export default function WaitlistModal() {
                 <label className=" ">Last Name</label>
                 <input
                   type="text"
-                  placeholder="Please enter your first name"
+                  placeholder="Please enter your last name"
                   className="bg-[#1E1E1E] py-4 rounded-lg w-full text-sm p-3 font-OssemRegular"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
@@ -84,7 +81,7 @@ export default function WaitlistModal() {
                 <label className=" ">Email</label>
                 <input
                   type="email"
-                  placeholder="Please enter your first name"
+                  placeholder="Please enter your email"
                   className="bg-[#1E1E1E] py-4 rounded-lg w-full text-sm p-3 font-OssemRegular"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -94,7 +91,7 @@ export default function WaitlistModal() {
                 <label className=" ">Wallet Address</label>
                 <input
                   type="text"
-                  placeholder="Please enter your first name"
+                  placeholder="Please enter your wallet address"
                   className="bg-[#1E1E1E] py-4 rounded-lg w-full text-sm p-3 font-OssemRegular"
                   value={wallet}
                   onChange={(e) => setWallet(e.target.value)}
@@ -104,7 +101,7 @@ export default function WaitlistModal() {
                 <label className=" ">Referral (if any)</label>
                 <input
                   type="text"
-                  placeholder="Please enter your first name"
+                  placeholder="Enter the referrer's name"
                   className="bg-[#1E1E1E] py-4 rounded-lg w-full text-sm p-3 font-OssemRegular"
                   value={referral}
                   onChange={(e) => setReferral(e.target.value)}
