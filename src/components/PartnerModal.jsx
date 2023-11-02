@@ -22,17 +22,14 @@ export default function PartnerModal() {
   };
 
   const dataSend = async () => {
-    console.log(" FORM DATA", formData);
-    console.log("position", position)
+
     const url = `https://docs.google.com/forms/d/e/1FAIpQLScamHdrRNJ4ur9V7PVH4d9Y-vqQHKtBSu_c6wODK37fNlC0VQ/formResponse?entry.1299402931=${formData["entry.1299402931"]}&entry.154737156=${formData["entry.154737156"]}&entry.1555725832=${formData["entry.1555725832"]}&entry.2016959891=${formData["entry.2016959891"]}&entry.1108091049=${position}`
-    console.log("URL", url)
-    const res = await fetch(url, {
+    await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       }
     });
-    console.log("resp", res);
   }
 
 
@@ -61,7 +58,7 @@ export default function PartnerModal() {
               <label className="font-GilroyMedium ">Last Name</label>
               <input
                 type="text"
-                placeholder="Please enter your first name"
+                placeholder="Please enter your last name"
                 className="bg-[#1E1E1E] py-4 rounded-lg w-full text-sm p-3 font-OssemRegular"
                 onChange={handleInputData("entry.154737156")}
                 value={formData["entry.154737156"]}
@@ -75,7 +72,7 @@ export default function PartnerModal() {
               <label className="font-GilroyMedium ">Email</label>
               <input
                 type="email"
-                placeholder="Please enter your first name"
+                placeholder="Please enter your email"
                 className="bg-[#1E1E1E] py-4 rounded-lg w-full text-sm p-3 font-OssemRegular"
                 onChange={handleInputData("entry.1555725832")}
                 value={formData["entry.1555725832"]}
@@ -87,7 +84,7 @@ export default function PartnerModal() {
               <label className="font-GilroyMedium ">Company</label>
               <input
                 type="text"
-                placeholder="Please enter your first name"
+                placeholder="Please enter your company"
                 className="bg-[#1E1E1E] py-4 rounded-lg w-full text-sm p-3 font-OssemRegular"
                 onChange={handleInputData("entry.2016959891")}
                 value={formData["entry.2016959891"]}
